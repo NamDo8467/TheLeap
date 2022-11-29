@@ -1,16 +1,30 @@
 {
-  "name": "leap",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "mongoose": "^6.7.3"
-  }
+	"name": "leap",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"test": "jest --runInBand",
+		"test1": "jest --detectOpenHandles",
+		"test2": "jest --forceExit",
+		"testLogin": "jest login.test.js",
+		"testRegister": "jest register.test.js",
+		"dev": "nodemon index.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"bcrypt": "^5.1.0",
+		"cookie-parser": "^1.4.6",
+		"cors": "^2.8.5",
+		"express": "^4.18.2",
+		"express-session": "^1.17.3",
+		"mongoose": "^6.7.3",
+		"nodemon": "^2.0.20"
+	},
+	"devDependencies": {
+		"jest": "^29.3.1",
+		"supertest": "^6.3.1"
+	}
 }
