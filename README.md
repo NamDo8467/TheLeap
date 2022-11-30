@@ -51,7 +51,8 @@ After successfully logged in using your own account, you can go to `http://local
 
 💡 *The request will show the home page but only in a specific amount of time. After that, whenever users make a request to their home page, they have to login.*
 # How to run unit tests
-Before running unit test, make sure you have already complete step 1 and 2 of [How to run the appication](#how-to-run-the-application)
+Before running unit test, make sure you have already complete step 1 and 2 of [How to run the appication](#how-to-run-the-application)  
+
 To test these 2 APIs, run the following command: 
 ```bash
 npm test
