@@ -1,9 +1,23 @@
 const express = require("express")
-const route = express.Router()
-const { loginController, registerController, logoutController } = require("../controllers/controller")
+const userRoute = express.Router()
+const tweetRoute = express.Router()
+const { login, register, logout } = require("../controllers/controller")
+const { postChat, getChat } = require("../controllers/chatController")
+const { createTweet, getAllTweets, getTweetById, deleteTweet, updateTweet } = require("../controllers/tweetController")
 
-route.post("/register", registerController)
-route.post("/login", loginController)
+/* USER ROUTE */
+userRoute.post("/register", register)
+userRoute.post("/login", login)
+userRoute.post("/logout", logout)
 
-route.post("/logout", logoutController)
-module.exports.router = route
+/* CHAT ROUTE */
+userRoute.post("/chat", postChat)
+userRoute.get("/chat", getChat)
+
+/* TWEET ROUTE */
+tweetRoute.post("/create", createTweet)
+tweetRoute.get("/all", getAllTweets)
+tweetRoute.get("/_id/:id", getTweetById)
+tweetRoute.post("/update/:id", updateTweet)
+tweetRoute.post("/delete/:id", deleteTweet)
+module.exports = { userRouter: userRoute, tweetRouter: tweetRoute }
