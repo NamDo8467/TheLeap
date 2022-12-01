@@ -32,7 +32,7 @@ const createTweetController = async (req, res) => {
 	try {
 		const { user, content } = req.body
 		const tweet = await Tweet.create({ user, content })
-		res.status(201).json({ message: "Tweet created" })
+		res.status(201).json({ message: "Tweet created", id: tweet._id })
 	} catch (error) {
 		let message = errorHandler("createTweet", error)
 		res.status(400).send(message)
