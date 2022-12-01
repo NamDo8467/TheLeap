@@ -1,11 +1,12 @@
 const { User } = require("../models/User")
 const bcrypt = require("bcrypt")
+
 const errorHandler = (type, error) => {
 	if (type === "register") {
 		if (error.code === 11000) {
 			return { message: "Username has been taken" }
 		} else if (error._message === "User validation failed") {
-			return { message: error.errors.username?.properties.message || error.errors.password?.properties.message}
+			return { message: error.errors.username?.properties.message || error.errors.password?.properties.message }
 		}
 	} else if (type === "login") {
 		return { message: `${error}` }
@@ -35,7 +36,6 @@ const loginController = async (req, res) => {
 			throw (new Error().message = "Password is incorrect")
 		} else {
 			req.session.userid = user.username
-			// console.log(req.session.userid)/
 			res.status(200).send({ message: "Logged in" })
 		}
 	} catch (error) {
@@ -51,7 +51,7 @@ const logoutController = (req, res) => {
 }
 
 module.exports = {
-	registerController,
-	loginController,
-	logoutController
+	register: registerController,
+	login: loginController,
+	logout: logoutController
 }
