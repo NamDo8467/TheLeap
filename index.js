@@ -1,7 +1,7 @@
 const express = require("express")
 const app = express()
 const session = require("express-session")
-const { router } = require("./routes/routes")
+const { userRouter, tweetRouter } = require("./routes/routes")
 const mongoose = require("mongoose")
 const cookieParser = require("cookie-parser")
 const TIME = 1000 * 60 * 60
@@ -18,7 +18,8 @@ app.use(
 
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
-app.use("/api", router)
+app.use("/api", userRouter)
+app.use("/api/tweet", tweetRouter)
 app.get("/", (req, res) => {
 	let session = req.session.userid
 	// console.log(req)
