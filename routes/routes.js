@@ -11,8 +11,8 @@ userRoute.post("/login", login)
 userRoute.post("/logout", logout)
 
 /* CHAT ROUTE */
-userRoute.post("/chat", postChat)
-userRoute.get("/chat", getChat)
+userRoute.post("/chat/send", postChat)
+userRoute.get("/chat/get", getChat)
 
 /* TWEET ROUTE */
 tweetRoute.post("/create", createTweet)
