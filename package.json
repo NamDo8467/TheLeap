@@ -10,6 +10,12 @@
 		"test2": "jest --forceExit",
 		"testLogin": "jest login.test.js",
 		"testRegister": "jest register.test.js",
+		"testChat": "jest chat.test.js",
+		"testCreateTweet": "jest testCreateTweet.test.js",
+		"testDeleteTweet": "jest testDeleteTweet.test.js",
+		"testGetAllTweets": "jest testGetAllTweets.test.js",
+		"testGetTweetById": "jest getTweetById.test.js",
+		"testUpdateTweet": "jest testUpdateTweet.test.js",
 		"dev": "nodemon index.js"
 	},
 	"author": "",
