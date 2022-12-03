@@ -106,15 +106,37 @@ Open Postman and create a new `POST` request with the URL to be `http://localhos
 # How to run unit tests
 Before running unit test, make sure you have already complete step 1 and 2 of [How to run the appication](#how-to-run-the-application)  
 
-To test these 2 APIs, run the following command: 
-```bash
-npm test
-```  
-You can also test those 2 methods one by one by doing:
+To test `login` feature, run the following command:
 ```bash
 npm run testLogin
 ```  
-and
+`register`
 ```bash
 npm run testRegister
+```  
+`chat`
+```bash
+npm run testChat
+```  
+For the CRUD operation of the tweet, it's best that you unit test the delete method last because the other CREATE, READ and UPDATE are dependent on a hardcoded tweet ID.  
+
+`createTweet`
+```bash
+npm run testCreateTweet
+```  
+`getAllTweets`
+```bash
+npm run testGetAllTweets
+```  
+`getTweetById`
+```bash
+npm run testGetTweetById
+```  
+`updateTweet`
+```bash
+npm run testUpdateTweet
+```  
+`deleteTweet`
+```bash
+npm run testDeleteTweet
 ```  
