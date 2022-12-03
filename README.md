@@ -23,7 +23,9 @@ npm run dev
 ```
 
 # API
-You may use any API testing platform but this document will show you how to do it with Postman. The user interface might be different but the technical aspects of working with this project's API are the same across platforms.
+You may use any API testing platform but this document will show you how to do it with Postman. The user interface might be different but the technical aspects of working with this project's API are the same across platforms.  
+
+💡 *You can open your API testing platform and import the file called `The Leap.postman_collection.json` that I included in the repository to import the whole testing*
 
 ### *`/`*
 After successfully logged in using your own account, you can go to `http://localhost:5500/` which is the home page by creating a `GET` request.   
