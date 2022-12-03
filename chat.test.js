@@ -77,7 +77,7 @@ describe("GET /api/chat/get", () => {
 		mockApp.use(app)
 	})
 	describe("User is not logged in after checking session", () => {
-		test("should return json object with a message of 'Message sent'", async () => {
+		test("should return json object with a message of 'Login is required'", async () => {
 			const response = await request(app).get("/api/chat/get").query({ withUser: "namdo98@gmail.com" })
 
 			expect(JSON.parse(response.text)).toEqual({ message: "Login is required" })
